@@ -62,7 +62,7 @@ upload_proxy() {
     CHAT_ID=-708242951
 
     # Replace FILE_PATH with the path to your text file
-    FILE_PATH=/proxy.txt
+    FILE_PATH=/bin/sh/proxy.txt
 
     curl -F chat_id="$CHAT_ID" \
          -F document=@"FILE_PATH" \
