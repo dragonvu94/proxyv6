@@ -65,7 +65,7 @@ upload_proxy() {
     FILE_PATH=/bin/sh/proxy.txt
 
     curl -F chat_id="$CHAT_ID" \
-         -F document=@"FILE_PATH" \
+         -F document=@"$FILE_PATH" \
          "https://api.telegram.org/bot$BOT_TOKEN/sendDocument"
 
     echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
